@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 80vh;
+        }
+        .div{
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .submit{
+            padding: 20px;
+        }
+        .popup{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:wheat;
+            height: 150px;
+            width: 140px;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="div">
+
+        <button class="submit" id="submit">submit</button>
+    </div>
+    <div class="popup" id="popup">
+        <h2>this is popup box</h2>
+        <button id="closepopup">ok</button>
+    </div>
+    <script>
+        var openpop = document.getElementById("submit");
+        var cpop = document.getElementById("popup")
+        var cl = document.getElementById("closepopup");
+
+        openpop.addEventListener("click",(e)=>{
+            alert("hello");
+            openpop.style.visibility="hidden";
+            cpop.style.visibility="visible";
+
+        })
+        cl.addEventListener("click",(e)=>{
+            cpop.style.visibility="hidden";
+            openpop.style.visibility="visible";
+        })
+    </script>
+</body>
+</html>
